@@ -103,10 +103,9 @@
     margin-right: var(--mb-0-25);
     margin-right: 2px;
 }
-.home__scroll-arrow:{
-    font-size: 1.25rem;
+.home__scroll-arrow {
+    font-size : 1.25rem;
 }
-*=============== BREAKPOINTS ===============*/
 /* For large devices (up to 992px) */
 @media screen and (max-width: 992px) {
    .home__content{
@@ -140,8 +139,6 @@
         margin-left: 7.5rem;
     }
   }
- 
-
 
 
 /* For medium devices (up to 768px) */
