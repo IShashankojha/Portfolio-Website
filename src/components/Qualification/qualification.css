@@ -65,7 +65,7 @@
 .qualification__line{
     display: block;
     width: 1px;
-    height: 100%;
+    height: 95%;
     background-color: var(--text-color);
     transform:translate(6px,-7px);
     
@@ -106,7 +106,7 @@
 @media screen and (max-width: 350px) {
     .qualification__data{
         gap: 0.5rem;
-        
+         
     }
  
   

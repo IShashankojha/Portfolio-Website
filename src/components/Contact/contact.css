@@ -91,6 +91,22 @@
 .contact__form-area textarea{
     resize: none;
 }
+.alert-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green color for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    max-width: 90%; /* Limit the width for small screens */
+    word-wrap: break-word; /* Prevent text from overflowing */
+  }
+  
+  
 
 
 /*=============== BREAKPOINTS ===============*/
@@ -100,8 +116,12 @@
         column-gap: 3rem;
 
     }
+
+    .alert-message {
+        max-width: 400px;
     
   }
+}
   
   /* For medium devices (up to 768px) */
   @media screen and (max-width: 768px) {
@@ -115,6 +135,12 @@
     .contact__form{
         margin:0 auto;
     }
+    .alert-message {
+        top: 15px;
+        right: 15px;
+        padding: 9px 18px;
+        font-size: 13px;
+      }
   }
   
   /* For small devices (up to 576px) */
@@ -125,6 +151,12 @@
     .contact__form{
         width: 100%;
     }
+    .alert-message {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 12px;
+      }
   }
   
   /* For extra small devices (up to 350px) */

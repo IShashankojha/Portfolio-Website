@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
@@ -24,6 +25,7 @@ const App=() =>{
       <Contact/>
       <Footer/>
       <ScrollUp/>
+      <SpeedInsights />
       </main>
        
     </>
