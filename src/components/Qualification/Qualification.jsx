@@ -41,7 +41,7 @@ const Qualification = () => {
                                 <span className="qualification__subtitle">Abdul Kalam Technical University</span>
                                     <div className="qualification__calendar">
                                         <i className="uil uil-calendar-alt">
-                                        </i> 2021-Present
+                                        </i>2021-Present
                                     </div>
                                     </div>
                                     <div>
@@ -50,9 +50,8 @@ const Qualification = () => {
 
                                         </span>
                                     </div>
-                                    <div></div>
                         </div>
-                         
+
                         <div className="qualification__data">
                             <div></div>
 
@@ -66,7 +65,7 @@ const Qualification = () => {
                                 <span className="qualification__subtitle">Central Board of Secondary Education [CBSE]</span>
                                     <div className="qualification__calendar">
                                         <i className="uil uil-calendar-alt">
-                                        </i> 2018-2019
+                                        </i>2018-2019
                                     </div>
                              </div>
                         </div>              
@@ -76,7 +75,7 @@ const Qualification = () => {
                                 <span className="qualification__subtitle">Central Board of Secondary Education [CBSE]</span>
                                     <div className="qualification__calendar">
                                         <i className="uil uil-calendar-alt">
-                                        </i> 2016-2017
+                                        </i>2016-2017
                                     </div>
                                     </div>
                                     <div>

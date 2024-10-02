@@ -110,7 +110,7 @@
 /* For extra small devices (up to 350px) */
 @media screen and (max-width: 350px) {
     .qualification__data {
-        gap: 0.5rem;
+        gap: 0.1rem;
     }
 }
 
@@ -127,5 +127,6 @@
     .qualification__data {
         grid-template-columns: 1fr; /* Align content in a single row */
         justify-items: center; /* Center content in the grid */
+        padding-right: 8rem;
     }
 }
