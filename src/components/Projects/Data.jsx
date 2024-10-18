@@ -9,6 +9,7 @@ export const projectsData = [
       image: Project1,
       title: "Weather application",
       category: "Web",
+      link: "https://weather-application-blue-rho.vercel.app/",
     },
     {
       id: 2,
