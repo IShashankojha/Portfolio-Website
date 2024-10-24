@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import emailjs from '@emailjs/browser';
 import './contact.css';
 
 const Contact = () => {
   const form = useRef();
   const [showAlert, setShowAlert] = useState(false);
+  const [errorAlert, setErrorAlert] = useState(false);
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
@@ -20,21 +22,21 @@ const Contact = () => {
     }
 
     emailjs
-      .sendForm('service_ar5y4yh', 'template_fs1qqin', form.current, {
-        publicKey: 'esdxUYJJCp2MRuf9c',
-      })
+      .sendForm('service_ar5y4yh', 'template_fs1qqin', form.current, 'esdxUYJJCp2MRuf9c')
       .then(() => {
         setShowAlert(true);
         setTimeout(() => {
           setShowAlert(false);
         }, 3000); // Hide alert after 3 seconds
+        setFormValues({ name: '', email: '', message: '' }); // Reset form values
       })
       .catch((error) => {
         console.error('Failed to send email:', error);
+        setErrorAlert(true);
+        setTimeout(() => {
+          setErrorAlert(false);
+        }, 3000); // Hide error alert after 3 seconds
       });
-
-    e.target.reset();
-    setFormValues({ name: '', email: '', message: '' });
   };
 
   const handleInputChange = (e) => {
@@ -43,13 +45,25 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact section" id="contact">
-      {showAlert && <div className="alert-message">Message sent successfully!</div>}
+    <motion.section 
+      className="contact section" 
+      id="contact" 
+      initial={{ opacity: 0, y: 20 }} // Initial state
+      animate={{ opacity: 1, y: 0 }} // Animate to final state
+      transition={{ duration: 0.5 }} // Duration of animation
+    >
+      {showAlert && <div className="alert-message" role="alert">Message sent successfully!</div>}
+      {errorAlert && <div className="alert-message alert-error" role="alert">Failed to send message. Please try again.</div>}
       <h2 className="section__title">Get in Touch</h2>
       <span className="section__subtitle">Contact Me</span>
 
       <div className="contact__container container grid">
-        <div className="contact__content">
+        <motion.div
+          className="contact__content"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }} // Slight delay for stagger effect
+        >
           <h3 className="contact__title">Talk to me</h3>
 
           <div className="contact__info">
@@ -57,7 +71,7 @@ const Contact = () => {
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">shashankojha109@gmail.com</span>
-              <a href="mailto:examplemail@gmail.com" className="contact__button">
+              <a href="mailto:shashankojha109@gmail.com" className="contact__button">
                 Write me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
@@ -65,7 +79,7 @@ const Contact = () => {
 
             <div className="container__card">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
+              <h3 className="contact__card-title">WhatsApp</h3>
               <span className="contact__card-data">7703000212</span>
               <a
                 href="https://api.whatsapp.com/send?phone=7703000212&text=Hello, more information!"
@@ -89,10 +103,15 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="contact__content">
-          <h3 className="contact__title"> Reach Out </h3>
+        <motion.div
+          className="contact__content"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }} // Slight delay for stagger effect
+        >
+          <h3 className="contact__title">Reach Out</h3>
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
@@ -104,6 +123,7 @@ const Contact = () => {
                 placeholder="Enter your name"
                 value={formValues.name}
                 onChange={handleInputChange}
+                required
               />
             </div>
 
@@ -116,6 +136,7 @@ const Contact = () => {
                 placeholder="Enter your email"
                 value={formValues.email}
                 onChange={handleInputChange}
+                required
               />
             </div>
 
@@ -129,6 +150,7 @@ const Contact = () => {
                 placeholder="Enter your text"
                 value={formValues.message}
                 onChange={handleInputChange}
+                required
               ></textarea>
             </div>
 
@@ -153,9 +175,9 @@ const Contact = () => {
               </svg>
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

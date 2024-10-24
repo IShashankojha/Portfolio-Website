@@ -1,51 +1,51 @@
-.scrollup{
+.scrollup {
     position: fixed;
-    right: 2.5rem;
-    bottom: -20%;
+    right: 2.5rem; /* Distance from the right edge */
+    bottom: -20%; /* Start off-screen */
     background-color: var(--title-color);
-    opacity: 0.8;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.4rem;
-    z-index: var(--z-tooltip);
-    transition:.4s;
-}
-.scrollup__icon{
-    font-size: 1.5rem;
-    color: var(--container-color);
-}
-.scrollup:hover{
-    background-color: var(--title-color-dark);
-}
-.show-scroll{
-     bottom: 3rem;
+    opacity: 0.8; /* Semi-transparent */
+    padding: 0.3rem 0.5rem; /* Padding for the button */
+    border-radius: 0.4rem; /* Rounded corners */
+    z-index: var(--z-tooltip); /* Layer above other elements */
+    transition: bottom 0.4s ease, opacity 0.4s ease; /* Smooth transitions for bottom and opacity */
 }
 
+.scrollup__icon {
+    font-size: 1.5rem; /* Size of the icon */
+    color: var(--container-color); /* Icon color */
+}
+
+.scrollup:hover {
+    background-color: var(--title-color-dark); /* Darken on hover */
+}
+
+.show-scroll {
+    bottom: 3rem; /* Position when the button is shown */
+}
 
 /*=============== BREAKPOINTS ===============*/
+
 /* For large devices (up to 992px) */
 @media screen and (max-width: 992px) {
-    .scrollup{
-        right: 1.5rem;
-        padding: 0.25rem 0.4rem;
+    .scrollup {
+        right: 1.5rem; /* Adjust position for smaller screens */
+        padding: 0.25rem 0.4rem; /* Smaller padding */
     }
-    .scrollup__icon{
-        font-size: 1.3rem;
+    .scrollup__icon {
+        font-size: 1.3rem; /* Smaller icon size */
     }
-  }
-  
-  /* For medium devices (up to 768px) */
-  @media screen and (max-width: 768px) {
-    .show-scroll{
-        bottom: 4rem;
+}
+
+/* For medium devices (up to 768px) */
+@media screen and (max-width: 768px) {
+    .show-scroll {
+        bottom: 4rem; /* Adjust position when shown */
     }
-   
-  }
-  
- 
-  /* For extra small devices (up to 350px) */
-  @media screen and (max-width: 350px) {
-     .scrollup{
-        right: 1rem;
-     }
-  }
-  
+}
+
+/* For extra small devices (up to 350px) */
+@media screen and (max-width: 350px) {
+    .scrollup {
+        right: 1rem; /* Further adjust position for very small screens */
+    }
+}
