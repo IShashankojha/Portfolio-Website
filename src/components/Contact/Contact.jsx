@@ -120,7 +120,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 className="contact__form-input"
-                placeholder="Enter your name"
+                placeholder="Enter your Name"
                 value={formValues.name}
                 onChange={handleInputChange}
                 required
@@ -128,12 +128,12 @@ const Contact = () => {
             </div>
 
             <div className="contact__form-div">
-              <label className="contact__form-tag">Mail</label>
+              <label className="contact__form-tag">E-Mail</label>
               <input
                 type="email"
                 name="email"
                 className="contact__form-input"
-                placeholder="Enter your email"
+                placeholder="Enter your E-mail"
                 value={formValues.email}
                 onChange={handleInputChange}
                 required

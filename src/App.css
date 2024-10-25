@@ -64,17 +64,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
- }
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body,
-button,
-input,
-textarea {
+.button,
+.input,
+.textarea {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
@@ -107,7 +106,6 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
-
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -168,7 +166,7 @@ img {
   align-items: center;
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*=============== RESPONSIVE BREAKPOINTS ===============*/
 /* For large devices (up to 992px) */
 @media screen and (max-width: 992px) {
   .container {
@@ -188,7 +186,7 @@ img {
 
 /* For medium devices (up to 768px) */
 @media screen and (max-width: 768px) {
-  body {
+  .body {
     margin: 0 0 var(--header-height) 0;
   }
 
@@ -201,7 +199,7 @@ img {
   }
 
   .grid {
-    gap: 1rem;  
+    gap: 1rem;
   }
 }
 

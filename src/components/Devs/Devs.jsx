@@ -11,16 +11,7 @@ const Devs = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-
-  // Effect to manage body class based on modal state
-  useEffect(() => {
-    if (toggleState > 0) {
-      document.body.classList.add('no-hover');
-    } else {
-      document.body.classList.remove('no-hover');
-    }
-  }, [toggleState]);
-
+ 
   // Define motion variants for the modal and description
   const modalVariants = {
     hidden: { opacity: 0, y: -50 }, // Hidden state
